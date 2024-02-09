@@ -1,0 +1,452 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Open Sans',sans-serif;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 100vh;
+}
+.main{
+    width: 340px;
+    height: 570px;
+    /* width: 100vw;
+    height: 100vh; */
+    background-color: aliceblue;
+    box-shadow: 3px 2px 4px 2px gray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.header1{
+    display: flex;
+    align-items: center;
+    padding: 15px 2px;
+    width: 100%;
+    background-color: #008069;
+    color: aliceblue;
+    border-radius: 3px 3px 0px 0px;
+    height: 80px;
+}
+.lcomp{
+    width: 55%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    user-select: none;
+}
+.rcomp{
+    margin-right: -10px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+}
+
+.tabs input{
+     visibility: hidden;
+    display: none; 
+    
+}
+.buttons{
+    position: relative;
+    display: flex;
+    background-color: #008069;
+    border-bottom: 2px solid #008069;
+}
+.buttons label{  
+    color: aliceblue;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 33.33%;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.buttons .nchat{
+    background-color: #ffffff;
+    margin-left: 5px;
+    width: 15px;
+    height: 14px;
+    font-size: 0.6rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#008069;
+    border-radius: 50%;
+}
+.buttons .nstatus{
+    margin-top: -13px;
+    margin-left: 3px;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#ffffff; 
+}
+
+
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3)
+{
+    opacity:1;
+}
+
+.underline{
+    width: 33.33%;
+    height:2.5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: -1px;
+    left:0; 
+    transition: 0.2s;
+}
+.tabs input:nth-child(1):checked ~ .buttons .underline
+{
+    left:0;
+}
+.tabs input:nth-child(2):checked ~ .buttons .underline
+{
+    left:33.33%;
+}
+.tabs input:nth-child(3):checked ~ .buttons .underline
+{
+    left:66.66%;
+}
+
+.content{
+    display: flex;
+    width: calc(340px * 3);  
+}
+.scroll {
+overflow: scroll;
+}
+ ::-webkit-scrollbar {
+width: 4px;
+height: 4px;
+}
+::-webkit-scrollbar-thumb {
+background: rgb(100, 100, 98);
+}
+::-webkit-scrollbar-thumb:hover {
+background: #3c3d3b;
+}
+
+.content .box{
+    width: 340px;
+    transition: 0.2s;
+    position: relative;
+    height: 470px;
+    
+}
+.chatlist{
+    height: 470px;
+    /* height: 100vh; */
+}
+
+.tabs input:nth-child(1):checked ~ .content .box
+{
+    left: 0;
+}
+.tabs input:nth-child(2):checked ~ .content .box
+{
+    left: -340px;
+}
+.tabs input:nth-child(3):checked ~ .content .box
+{
+    left: calc(-340px * 2);
+}
+
+
+
+.chatlist .person{
+    height: 60px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(248, 248, 248);
+ 
+}
+
+ .chatlist .person:active{
+    background-color:#dddfde;
+}  
+
+.tick{
+    margin-right: 5px;
+    font-size:0.9rem;
+    --ionicon-stroke-width:45px;
+}
+.btick{
+    color:#0a8bd6;
+}
+.dtick{
+    color:#6b767e;
+}
+.stick{
+    color:#6b767e;
+}
+
+
+.person .dp{
+    width: 20%;
+    
+    height: 50px;
+    
+}
+
+.person .dp img{
+    background-size: contain;
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    margin:6px;
+    
+}
+
+.person .massege{
+    width: 100%;
+    height: inherit;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    position: relative;
+}
+.massege .upart{
+    width:100%;
+    height: 60%;
+    display: flex;
+}
+.massege .upart .name{
+    width: 85%;
+    align-items: center;
+    font-size: 0.9rem;
+    display: flex;
+    font-weight: 500;
+}
+.massege .upart .date{
+    color: #6D6D6D;
+    align-items: center;
+    font-size: 0.75rem;
+    display: flex;
+    font-weight: 600;
+}
+.chatlist .dseen{
+    color: #06b191;
+    align-items: center;
+    font-size: 0.75rem;
+    display: flex;
+    font-weight: 600;
+}
+
+.chatlist .lpart{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+      
+}
+
+.chatlist  .pin{
+    transform: rotate(45deg);
+    position: absolute;
+    right: 32px;
+    width: 17px;
+    height: 17px;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6D6D6D;
+    border-radius: 50%;
+    opacity: 1;
+}
+.chatlist  .seen{
+    background-color: #06b191;
+    position: absolute;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+    font-size: 0.6rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 50%;
+    opacity: 1;
+
+}
+.massege .lpart{
+    width:100%;
+    height: 40%;
+    color: #6D6D6D;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: -8px;
+}
+
+.over_icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 32px;
+    right: 20px;
+    color: #ffffff;
+    font-size: 1rem;
+    background-color: #008069;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;  
+}
+.over_icon:active{
+    background-color:#015c4b;
+}
+
+.statuslist{
+    height: 470px;
+    display: block;
+}
+.statuslist .person{
+    position: relative;
+    height: 60px;
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid rgb(248, 248, 248);
+ 
+}
+
+.statuslist .person:active{
+    background-color: #dddfde;
+}
+.plus{
+    position: absolute;
+    left: 35px;
+    top:32px;
+    width: 20px;
+    height: 20px;
+    background-color: #008069;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: aliceblue;
+    border: 1px solid black;
+}
+
+.breaker{
+    width: 100%;
+    font-size: small;
+    font-weight: 600;
+    color: #008069;
+    background-color: rgb(248, 248, 248);
+    padding: 4px 10px; 
+}
+
+
+.statuslist .rupdates img{
+    padding: 0.9px;
+    border: 3px solid #12ac8f;
+}
+
+.statuslist .vupdates img{
+    padding: 0.9px;
+    border: 3px solid #b4c7c3;
+}
+.status .over_icon{
+    font-size: 1.4rem;
+}
+.status .pen{
+    width: 30px;
+    height: 30px;
+    bottom: 80px;
+    right: 25px;
+    font-size: 0.7rem;
+    color: #49504f;
+    background-color: rgb(221, 220, 220);
+}
+
+.call_list{
+    height: 470px;
+    display: block;
+    background-color: #ffffff;
+}
+.call_list .person{
+    position: relative;
+    height: 60px;
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid rgb(248, 248, 248);
+}
+
+.call_list .person:active{
+    background-color: #dddfde;
+}
+
+.call_list .dp .link_icon{
+    width: 90%;
+    height: 90%;
+    background-color: #008069;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    
+}
+.call_list .dp .link_icon ion-icon{
+    transform: rotate(-45deg);
+}
+
+.call_list .lpart .icall{
+    color: #12ac8f;
+    transform: rotate(140deg);
+    margin-right: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.call_list .lpart .ocall{
+    color: #12ac8f;
+    transform: rotate(-140deg);
+    margin-right: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.call_list .lpart .imcall{
+    color: red;
+    transform: rotate(140deg);
+    margin-right: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.recent .person .rcom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #008069;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}

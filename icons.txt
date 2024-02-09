@@ -1,0 +1,17 @@
+<ion-icon name="camera-outline"></ion-icon>
+    <ion-icon name="camera"></ion-icon>
+    <ion-icon name="link"></ion-icon>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+    <i class="fa-solid fa-video"></i>
+    <i class="fa-solid fa-phone"></i>
+    <i class="fa-solid fa-message"></i>
+    <i class="fa-solid fa-pen"></i>
+    <i class="fa-solid fa-microphone"></i>
+    <i class="fa-solid fa-indian-rupee-sign"></i>
+    <i class="fa-solid fa-paperclip"></i>
+    <i class="fa-regular fa-face-smile"></i>
+    <i class="fa-solid fa-arrow-right"></i>
+    <ion-icon name="checkmark-done-outline"></ion-icon>//double tick
+    <ion-icon name="checkmark-outline"></ion-icon>//single tick
+    Helvetica 
