@@ -22,6 +22,8 @@ body{
     box-shadow: 3px 2px 4px 2px gray;
     border-radius: 5px;
     overflow: hidden;
+    background-color: #008069;
+    scale:1.3;
     
 }
 .header1{
