@@ -11,6 +11,7 @@ body{
     align-items: center;
     background-color: antiquewhite;
     height: 100vh;
+    scale:1.5;
 }
 .main{
     width: 340px;
@@ -21,7 +22,7 @@ body{
     box-shadow: 3px 2px 4px 2px gray;
     border-radius: 5px;
     overflow: hidden;
-    scale:1.5;
+    
 }
 .header1{
     display: flex;
